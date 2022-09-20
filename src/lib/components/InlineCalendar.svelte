@@ -49,6 +49,6 @@
 
 <style>
 	div {
-		display: inline-block;
+		display: flex;
 	}
 </style>

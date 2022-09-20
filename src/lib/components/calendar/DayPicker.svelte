@@ -10,7 +10,6 @@
 	import { scrollStep } from '$lib/config/scroll';
 
 	const store = getContext(storeContextKey);
-
 	const duration = 450;
 
 	const legend = Array(7)
@@ -98,6 +97,13 @@
 								in:receive|local={{ key }}
 							>
 								{day.date.getDate()}
+								<div class="dots">
+									{#if $store.dots && Object.keys($store.dots).includes(dayjs(day.date).format())}
+										{#each $store.dots[dayjs(day.date).format()] as color}
+											<div class="dot" style="background-color: {color}" />
+										{/each}
+									{/if}
+								</div>
 							</a>
 						{/if}
 					{/each}
@@ -149,5 +155,18 @@
 		.selected-big {
 			font-size: calc(var(--sc-theme-calendar-font-large) * 0.7);
 		}
+	}
+	.dot {
+		height: 10px;
+		width: 10px;
+		border-radius: 50%;
+		display: inline-block;
+		margin-top: 3px;
+		margin-right: 3px;
+	}
+	.dots {
+		display: flex;
+		justify-content: center;
+		height: 100%;
 	}
 </style>
