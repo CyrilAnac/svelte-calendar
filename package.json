@@ -15,7 +15,7 @@
     "format": "prettier --write --plugin-search-dir=. ."
   },
   "dependencies": {
-    "dayjs": "^1.10.6",
+    "dayjs": "^2.0.0-alpha.2",
     "just-throttle": "^2.3.1"
   },
   "devDependencies": {
