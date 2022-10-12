@@ -98,8 +98,8 @@
 							>
 								{day.date.getDate()}
 								<div class="dots">
-									{#if $store.dots && Object.keys($store.dots).includes(dayjs(day.date).format())}
-										{#each $store.dots[dayjs(day.date).format()] as color}
+									{#if $store.dots && Object.keys($store.dots).includes(dayjs(day.date).format('YYYY-MM-DD'))}
+										{#each $store.dots[dayjs(day.date).format('YYYY-MM-DD')] as color}
 											<div class="dot" style="background-color: {color}" />
 										{/each}
 									{/if}
