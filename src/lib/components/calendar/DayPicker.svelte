@@ -122,6 +122,7 @@
 	.container {
 		display: grid;
 		grid-template-rows: auto 1fr;
+		max-width: none;
 	}
 	.legend {
 		display: grid;
